@@ -5,7 +5,7 @@ body {
 }
 
 .container-lg {
-  height: 1700px;
+  height: 2000px;
   overflow: scroll;
   overflow-x: hidden;
   overflow-y: auto;
@@ -22,16 +22,14 @@ a,
   margin: 0.5rem;
   border: none;
   color: black;
-  height:inherit;
+ 
 }
-
-
 
 #dev_ing,
 #mots_fleches,
 #switch_langues,
 #plus,
-#mp {
+#mp, .btn {
   font-family: 'Spartan', sans-serif;
   font-weight: 300;
 }
@@ -53,20 +51,28 @@ a,
   margin: 2rem;
 }
 
-#contactButton, a{
-  background:none;
+#contactButton,
+a {
+  background: none;
 }
 
 #row_1 {
-  height: 40%;
+  height: 35%;
 }
 
 #row_2 {
   height: 5%;
 }
 
-#aproposButton{
-  height:60%;
+#aproposButton {
+  height: 40%;
+  width:50%;
+  position:relative;
+  margin:auto;
+}
+
+#contactButton{
+  height:20%;
 }
 
 #row_3 {
@@ -74,103 +80,130 @@ a,
 }
 
 #row_4 {
-  height: 35%;
+  height: 40%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 33% 33% 33%;
+  grid-template-rows: 25% 25% 25% 25%;
   justify-items: stretch;
-  grid-gap:2%;
-  grid-template-areas: 
-  "F F Langages Langages"
-  "E E H H "
-  "Langues D Logiciels A";
+  grid-gap: 2%;
+  grid-template-areas:
+    "F F Langages Langages"
+    "E E H H "
+    "D D Logiciels Logiciels"
+    "Langues Langues A A";
+
 }
 
-#experiencesButton{
+#experiencesButton {
   grid-area: E;
+  clip-path: polygon(40% 0, 5% 100%, 90% 100%);
+  margin-top: -10%;
 }
 
-#langagesButton{
-  grid-area: Langages;
-}
-
-#formationsButton{
-  grid-area: F;
-}
-
-#hobbiesButton{
-  grid-area: H;
-}
-
-#languesButton{
-  grid-area: Langues;
-}
-
-#diplomesButton{
-  grid-area: D;
-}
-
-#associationsButton{
-  grid-area: A;
-}
-
-#experiencesButton{
-  grid-area: E;
-}
-
-#logicielsButton{
-  grid-area: Logiciels;
-}
-
-.btn{
-  width:30%;
-  height:inherit;
-  width: 100%;
-  height: 100%;
-  grid-column: span 3;
+#labelExperiences{
   position: relative;
+  top:10%;
+  right:5%;
 }
 
-#hobbiesButton{
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+#langagesButton {
+  grid-area: Langages;
+  clip-path: polygon(5% 2%, 70% 100%, 60% 10%);
+  height: 130%;
 }
 
-#formationsButton{
-  clip-path: polygon(77% 9%, 1% 26%, 55% 100%);
-  height:105%;
+#labelLangages {
+  position: relative;
+  bottom:15%;
+  right:3%;
 }
 
-#experiencesButton{
-  clip-path: polygon(0 0, 23% 100%, 100% 100%);
-  margin-top:-10%;
+#formationsButton {
+  grid-area: F;
+  clip-path: polygon(50% 0%, 1% 35%, 50% 97%);
+  margin-left: 53%;
+  height: 140%;
 }
 
-#langagesButton{
-  clip-path: polygon(71% 2%, 2% 5%, 100% 100%);
-margin-top:10%;
-margin-right:10%;
+#labelFormations {
+  position: relative;
+  right:15%;
+  bottom:8%;
 }
 
-#hobbiesButton{
-  clip-path: polygon(19% 1%, 9% 100%, 100% 100%);
-margin-top:-10%;
+#hobbiesButton {
+  grid-area: H;
+  clip-path: polygon(0% 0%, 0% 100%, 70% 100%);
+  margin-top: -22%;
+  height: 140%;
 }
 
-#row_5{
-  height:10%;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: space-between;
-  align-items: center;
+#labelHobbies{
+  position:relative;
+  right:30%;
+  top:20%;
 }
 
-#contactButton{
-  flex:1;
+#labelHobbies {
+  position: relative;
+  margin-top: 30%;
 }
 
-#icones_contact{
-  flex:2;
+#languesButton {
+  grid-area: Langues;
+  clip-path: polygon(5% 0, 31% 77%, 85% 77%);
+  margin-top: -25%;
+  height: 130%;
 }
+
+#labelLangues{
+  position:relative;
+  margin-right:30%;
+}
+
+#diplomesButton {
+  grid-area: D;
+  clip-path: polygon(5% 0, 90% 70%, 72% 0);
+  margin-top: -3%;
+  height: 160%;
+}
+
+#labelDiplomes{
+  position:relative;
+  left:10%;
+  bottom:30%;
+}
+
+#associationsButton {
+  grid-area: A;
+  clip-path: polygon(60% 75%, 0% 95%, 69% 0);
+  margin-top: -36%;
+  height: 140%;
+}
+
+#labelAssociations{
+  position:relative;
+  top:5%;
+  right:2%;
+}
+
+#logicielsButton {
+  grid-area: Logiciels;
+  clip-path: polygon(70% 0, 15% 100%, 0 0);
+  margin-left: -11%;
+  margin-top: -3%;
+}
+
+#labelLogiciels{
+  position:relative;
+  right:25%;
+  bottom:15%;
+}
+
+#row_5 {
+  height: 5%;
+}
+
 img {
   width: inherit;
   position: absolute;
@@ -207,4 +240,14 @@ a {
   color: black;
   text-decoration: none;
   font-size: 25px;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  margin-left:9%;
+}
+
+.btn:active.after{
+  color:lawngreen;
 }
