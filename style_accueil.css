@@ -18,18 +18,18 @@ li {
 
 a,
 .btn {
-  background: lavender;
+  background: rgb(230, 237, 245);
   margin: 0.5rem;
   border: none;
   color: black;
- 
 }
 
 #dev_ing,
 #mots_fleches,
 #switch_langues,
 #plus,
-#mp, .btn {
+#mp,
+.btn {
   font-family: 'Spartan', sans-serif;
   font-weight: 300;
 }
@@ -51,8 +51,7 @@ a,
   margin: 2rem;
 }
 
-#contactButton,
-a {
+#contactButton, a {
   background: none;
 }
 
@@ -66,13 +65,13 @@ a {
 
 #aproposButton {
   height: 40%;
-  width:50%;
-  position:relative;
-  margin:auto;
+  width: 50%;
+  position: relative;
+  margin: auto;
 }
 
-#contactButton{
-  height:20%;
+#contactButton {
+  height: 20%;
 }
 
 #row_3 {
@@ -100,10 +99,10 @@ a {
   margin-top: -10%;
 }
 
-#labelExperiences{
+#labelExperiences {
   position: relative;
-  top:10%;
-  right:5%;
+  top: 10%;
+  right: 5%;
 }
 
 #langagesButton {
@@ -114,8 +113,8 @@ a {
 
 #labelLangages {
   position: relative;
-  bottom:15%;
-  right:3%;
+  bottom: 15%;
+  right: 3%;
 }
 
 #formationsButton {
@@ -127,8 +126,8 @@ a {
 
 #labelFormations {
   position: relative;
-  right:15%;
-  bottom:8%;
+  right: 15%;
+  bottom: 8%;
 }
 
 #hobbiesButton {
@@ -138,10 +137,10 @@ a {
   height: 140%;
 }
 
-#labelHobbies{
-  position:relative;
-  right:30%;
-  top:20%;
+#labelHobbies {
+  position: relative;
+  right: 30%;
+  top: 20%;
 }
 
 #labelHobbies {
@@ -156,9 +155,9 @@ a {
   height: 130%;
 }
 
-#labelLangues{
-  position:relative;
-  margin-right:30%;
+#labelLangues {
+  position: relative;
+  margin-right: 30%;
 }
 
 #diplomesButton {
@@ -168,10 +167,10 @@ a {
   height: 160%;
 }
 
-#labelDiplomes{
-  position:relative;
-  left:10%;
-  bottom:30%;
+#labelDiplomes {
+  position: relative;
+  left: 10%;
+  bottom: 30%;
 }
 
 #associationsButton {
@@ -181,10 +180,10 @@ a {
   height: 140%;
 }
 
-#labelAssociations{
-  position:relative;
-  top:5%;
-  right:2%;
+#labelAssociations {
+  position: relative;
+  top: 5%;
+  right: 2%;
 }
 
 #logicielsButton {
@@ -194,10 +193,10 @@ a {
   margin-top: -3%;
 }
 
-#labelLogiciels{
-  position:relative;
-  right:25%;
-  bottom:15%;
+#labelLogiciels {
+  position: relative;
+  right: 25%;
+  bottom: 15%;
 }
 
 #row_5 {
@@ -205,13 +204,12 @@ a {
 }
 
 img {
-  width: inherit;
   position: absolute;
 }
 
 
 /* bouton "en savoir plus" / "discover more" */
-#plus {
+ #contactButton{
   animation: 1.5s infinite;
   animation-name: glissement;
 }
@@ -245,9 +243,54 @@ a {
 .btn {
   width: 100%;
   height: 100%;
-  margin-left:9%;
+  margin-left: 9%;
 }
 
-.btn:active.after{
-  color:lawngreen;
+.btn:hover, .btn:focus{
+    transition: 0.7s;
+    background-color: rgb(182, 112, 112);
+  }
+#hobbies_body{
+  display:grid;
+  grid-template-columns: 1% repeat(2,1fr) 5%;
+  grid-template-rows: 2% repeat(3,1fr) 5%;
+  grid-gap : 10%;
+  justify-items: center;
 }
+img{
+    position:relative;
+    width:100px;
+  }
+
+  #img_ski{
+    grid-column: 2/3;
+    grid-row: 2;
+  }
+
+  #img_cheval {
+    grid-column: 3/4;
+    grid-row: 2;
+  }
+
+  #img_cuisine{
+    grid-column: 2/3;
+    grid-row: 3;
+  }
+
+  #img_couture{
+    grid-column: 3/4;
+    grid-row: 3;
+  }
+  
+  #plus>img{
+    position:relative;
+    width:30px;
+    margin-left :1rem;
+    top:10%;
+  }
+
+
+  img{
+    margin:3%;
+  }
+
